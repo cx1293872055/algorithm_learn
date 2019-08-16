@@ -49,13 +49,24 @@ public class AlgoFrame extends JFrame{
 
 
     private class AlgoCanvas extends JPanel{
+        public AlgoCanvas() {
+            //是否支持双缓存
+            super(true);
+        }
 
         @Override
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
 
             Graphics2D g2d = (Graphics2D)g;
+            //坑锯齿
+            RenderingHints hints = new RenderingHints(
+                    RenderingHints.KEY_ANTIALIASING,
+                    RenderingHints.VALUE_ANTIALIAS_ON);
 
+            g2d.addRenderingHints(hints);
+
+            //绘制
             AlgoVisHelper.setStrokeWidth(g2d, 5);
 
             AlgoVisHelper.setColor(g2d,Color.BLUE);
