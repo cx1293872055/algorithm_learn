@@ -11,10 +11,9 @@ public class AlgoFrame extends JFrame{
     public AlgoFrame(String title, int canvasWidth, int canvasHeight){
 
         super(title);
-
         this.canvasWidth = canvasWidth;
         this.canvasHeight = canvasHeight;
-
+        System.out.println(this);
         AlgoCanvas canvas = new AlgoCanvas();
         setContentPane(canvas);
         pack();
@@ -42,7 +41,8 @@ public class AlgoFrame extends JFrame{
 
     private class AlgoCanvas extends JPanel{
 
-        public AlgoCanvas(){
+        public AlgoCanvas() {
+
             // 双缓存
             super(true);
         }
@@ -52,7 +52,6 @@ public class AlgoFrame extends JFrame{
             super.paintComponent(g);
 
             Graphics2D g2d = (Graphics2D)g;
-
             // 抗锯齿
             RenderingHints hints = new RenderingHints(
                     RenderingHints.KEY_ANTIALIASING,
@@ -65,7 +64,6 @@ public class AlgoFrame extends JFrame{
             AlgoVisHelper.setColor(g2d, AlgoVisHelper.Blue);
             Circle circle = data.getCircle();
             AlgoVisHelper.strokeCircle(g2d, circle.getX(), circle.getY(), circle.getR());
-
             for(int i = 0 ; i < data.getPointsNumber() ; i ++){
                 Point p = data.getPoint(i);
                 if(circle.contain(p))
