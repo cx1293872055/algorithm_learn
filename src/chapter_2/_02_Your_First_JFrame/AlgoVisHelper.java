@@ -1,8 +1,6 @@
 package chapter_2._02_Your_First_JFrame;
 
-import java.awt.BasicStroke;
-import java.awt.Color;
-import java.awt.Graphics2D;
+import java.awt.*;
 import java.awt.geom.Ellipse2D;
 
 public class AlgoVisHelper {
@@ -27,5 +25,13 @@ public class AlgoVisHelper {
 
     public static void setStrokeWidth(Graphics2D g, int w){
         g.setStroke(new BasicStroke(w, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+    }
+
+    public static void pause(int t) {
+        try {
+            Thread.sleep(t);
+        } catch (InterruptedException e) {
+            System.out.println("Error in sleeping");
+        }
     }
 }
