@@ -69,16 +69,17 @@ public class MergeSort{
 //        Integer[] arr = SortTestHelper.generateRandomArray(N, 0, 100000);
 //        SortTestHelper.testSort("bobo.algo.MergeSort", arr);
 
-        Integer[] arr = new Integer[100];
-        for(int i = 0 ; i < 100 ; i ++)
-            arr[i] = (int) (Math.random() * 100);
-
-        for(int i = 0 ; i < 100 ; i ++)
+        Integer[] arr = new Integer[20];
+        for(int i = 0 ; i < 20 ; i ++)
+            arr[i] = (int) (Math.random() * 20);
+        System.out.println();
+        for(int i = 0 ; i < 20 ; i ++)
             System.out.print(arr[i]+" ");
+        System.out.println();
         System.out.println(System.currentTimeMillis());
         MergeSort.sort(arr);
         System.out.println(System.currentTimeMillis());
-        for(int i = 0 ; i < 100 ; i ++)
+        for(int i = 0 ; i < 20 ; i ++)
             System.out.print(arr[i]+" ");
         return;
     }
