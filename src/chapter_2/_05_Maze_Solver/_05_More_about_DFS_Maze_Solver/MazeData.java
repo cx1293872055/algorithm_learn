@@ -1,4 +1,4 @@
-package chapter_2._05_Maze_Solver._04_DFS_Maze_Solver;
+package chapter_2._05_Maze_Solver._05_More_about_DFS_Maze_Solver;
 
 import java.io.BufferedInputStream;
 import java.io.File;
