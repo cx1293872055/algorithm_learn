@@ -1,4 +1,4 @@
-package chapter_2._04_Sort_Visualization._08_Quick_Sort_Visualization_with_Random_Pivot;
+package chapter_2._04_Sort_Visualization._09_Two_Ways_Quick_Sort_Visualization._01_Quick_Sort_Visualization_with_Almost_Identical_Items_Problem;
 
 import java.awt.*;
 
@@ -18,12 +18,14 @@ public class AlgoVisualizer {
         EventQueue.invokeLater(() -> {
             frame = new AlgoFrame("Quick Sort Visualization", sceneWidth, sceneHeight);
 
-            new Thread(this::run).start();
+            new Thread(() -> {
+                run();
+            }).start();
         });
     }
 
     public AlgoVisualizer(int sceneWidth, int sceneHeight, int N){
-        this(sceneWidth, sceneHeight, N, QuickSortData.Type.Default);
+        this(sceneWidth, sceneHeight, N, QuickSortData.Type.Identical);
     }
 
     public void run(){
@@ -36,9 +38,6 @@ public class AlgoVisualizer {
     }
 
     private void quickSort(int l, int r){
-
-//        if( l >= r )
-//            return;
 
         if( l > r )
             return;
@@ -98,7 +97,7 @@ public class AlgoVisualizer {
         int sceneHeight = 800;
         int N = 100;
 
-        AlgoVisualizer vis = new AlgoVisualizer(sceneWidth, sceneHeight, N, QuickSortData.Type.NearlyOrdered);
+        AlgoVisualizer vis = new AlgoVisualizer(sceneWidth, sceneHeight, N, QuickSortData.Type.Identical);
 
     }
 }
