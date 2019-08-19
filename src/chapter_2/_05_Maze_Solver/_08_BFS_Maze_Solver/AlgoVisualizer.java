@@ -2,11 +2,10 @@ package chapter_2._05_Maze_Solver._08_BFS_Maze_Solver;
 
 import java.awt.*;
 import java.util.LinkedList;
-import java.util.Stack;
 
 public class AlgoVisualizer {
 
-    private static int DELAY = 5;
+    private static int DELAY = 1;
     private static int blockSide = 8;
 
     private MazeData data;
