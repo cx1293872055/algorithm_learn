@@ -1,4 +1,4 @@
-package chapter_2._06_Maze_Generalization._07_Random_Maze_Generalization_with_Mist;
+package chapter_2._06_Maze_Generalization._08_More_about_Random_Maze_Generalization._02_More_about_Random_Maze_Generalization;
 
 import java.awt.*;
 
